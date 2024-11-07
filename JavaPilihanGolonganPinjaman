@@ -1,0 +1,65 @@
+import java.util.Scanner;
+
+Public class KaryawanPinjaman{
+   public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Menampilkan pilihan status
+        System.out.println("Pilihan Status (Ketik 1/2):");
+        System.out.println("1. Karyawan Tetap");
+        System.out.println("2. Karyawan Honorer");
+        int status = scanner.nextInt();
+
+        // Menampilkan pilihan golongan pinjaman berdasarkan status
+        if (status == 1) {
+            System.out.println("Pilih Golongan Pinjaman (Karyawan Tetap) (Ketik 1/2/3):");
+            System.out.println("1. Golongan A(Rp 1000.000.00)");
+            System.out.println("2. Golongan B(Rp 7500.000.0)");
+            System.out.println("3. Golongan C(Rp 5000.000.0)");
+        } else if (status == 2) {
+            System.out.println("Pilih Golongan Pinjaman (Karyawan Honorer) (Ketik 1/2/3):");
+            System.out.println("1. Golongan A(Rp 3000.000.0)");
+            System.out.println("2. Golongan B(Rp 2000.000.0)");
+            System.out.println("3. Golongan C(Rp 1000.000.0)");
+        } else {
+            System.out.println("Pilihan tidak valid.");
+            return;
+        }
+
+        // Menerima input golongan pinjaman
+        int golongan = scanner.nextInt();
+
+        // Menampilkan hasil berdasarkan pilihan golongan
+        if (status == 1) {
+            switch (golongan) {
+                case 1:
+                    System.out.println("Anda memilih Karyawan Tetap - Golongan A.");
+                    break;
+                case 2:
+                    System.out.println("Anda memilih Karyawan Tetap - Golongan B.");
+                    break;
+                case 3:
+                    System.out.println("Anda memilih Karyawan Tetap - Golongan C.");
+                    break;
+                default:
+                    System.out.println("Golongan tidak valid.");
+            }
+        } else if (status == 2) {
+            switch (golongan) {
+                case 1:
+                    System.out.println("Anda memilih Karyawan Honorer - Golongan A.");
+                    break;
+                case 2:
+                    System.out.println("Anda memilih Karyawan Honorer - Golongan B.");
+                    break;
+                case 3:
+                    System.out.println("Anda memilih Karyawan Honorer - Golongan C.");
+                    break;
+                default:
+                    System.out.println("Golongan tidak valid.");
+            }
+        }
+
+        scanner.close();
+    }
+}
